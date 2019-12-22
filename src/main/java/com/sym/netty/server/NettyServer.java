@@ -26,10 +26,11 @@ public class NettyServer {
         try {
             ServerBootstrap b = new ServerBootstrap(); // (2)
             b.group(bossGroup, workerGroup)
+                    .handler(null)//bossGroup的handler
                     .channel(NioServerSocketChannel.class) // (3)
-                    .childHandler(new SimpleServerInitializer())  //(4)
+                    .childHandler(new SimpleServerInitializer())//workerGroup的handler  //(4)
                     .option(ChannelOption.SO_BACKLOG, 128)//队列大小// (5)
-                    .childOption(ChannelOption.SO_KEEPALIVE, true); // (6)
+                    .childOption(ChannelOption.SO_KEEPALIVE, true);//一直保持活跃的连接 // (6)
 
             System.out.println("SimpleChatServer 启动了");
 
