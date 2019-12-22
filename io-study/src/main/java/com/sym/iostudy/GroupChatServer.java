@@ -1,5 +1,5 @@
 
-package com.atguigu.nio.groupchat;
+package com.sym.iostudy;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -7,6 +7,9 @@ import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.util.Iterator;
 
+/**
+ * 单reactor 单线程
+ */
 public class GroupChatServer {
     //定义属性
     private Selector selector;

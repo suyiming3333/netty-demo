@@ -1,4 +1,4 @@
-package com.atguigu.nio.groupchat;
+package com.sym.iostudy;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

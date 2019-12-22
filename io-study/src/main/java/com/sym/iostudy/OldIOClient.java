@@ -1,4 +1,4 @@
-package com.atguigu.nio.zerocopy;
+package com.sym.iostudy;
 
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
